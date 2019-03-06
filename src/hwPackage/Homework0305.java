@@ -1,6 +1,4 @@
-package w3Package;
-
-import java.util.Arrays;
+package hwPackage;
 
 import static java.lang.StrictMath.abs;
 import static java.lang.StrictMath.min;

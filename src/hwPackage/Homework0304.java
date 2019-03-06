@@ -1,4 +1,4 @@
-package w3Package;
+package hwPackage;
 
 import java.util.*;
 
