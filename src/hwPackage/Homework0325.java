@@ -2,17 +2,25 @@ package hwPackage;
 
 public class Homework0325 {
     public static void main(String[] args) {
-        int[] data = {4,2,0,9,8,1};
+        int[] data = {7,4,3,5,9};
         insertionSort(data);
         for(int temp:data){
             System.out.print(temp+", ");
         }
     }
     public static void insertionSort(int[] arr){
-        for(int i=1;i<arr.length;++i){
-            for(int j=i-1;j>=0;--j){
-                if(arr[j]>arr[j+1]) swap(arr,j,j+1);
+        int i,j;
+        for(i=1;i<arr.length;++i){
+            int key = arr[i];
+            for(j=i-1;j>=0;--j){
+                if(arr[j]>key){
+                    arr[j+1] = arr[j];
+                }
+                else{
+                    break;
+                }
             }
+            arr[++j] = key;
         }
     }
     public static void swap(int[] arr,int i,int j){
